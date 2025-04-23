@@ -49,9 +49,9 @@ def extract_url_features(url):
     }
 
     if "http://" in url and "https://" not in url:
-        features["HTTPS_token"] = -1  # Помечаем как фишинг
+        features["HTTPS_token"] = -1  # Marking it as phishing
 
-    print(f"Extracted features: {features}")  # Логируем извлеченные признаки для отладки
+    print(f"Extracted features: {features}")  # Logging the extracted features for debugging
     return pd.DataFrame([features])
 
 
